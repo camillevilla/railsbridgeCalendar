@@ -1,0 +1,52 @@
+th {
+	color:blue;
+}
+
+table{
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.classy{
+	border: 1 px solid rgb(240, 140, 240);
+}
+.title {
+	font-size: 72px;
+	color:rgb(240, 140, 240);
+	text-align: center;
+}
+td {
+	position: relative;
+	width:100px;
+	height:100px;
+}
+
+
+td:nth-child(even){
+	background-color: rgba(0,0,0,0.1);
+}
+
+
+td:hover{
+	background-color: rgba(100,100,200,0.5);
+}
+
+.date {
+	position:absolute;
+	top: 2px;
+	left: 2px;
+}
+
+.event {
+	background-color: rgba(190,100,200,0.2);
+	display:block;
+}
+
+form {
+	margin: 15px auto;
+	display:block;
+	padding: 15px;
+	border: 1px solid rgb(240,140,240);
+	width: 400px;
+}
