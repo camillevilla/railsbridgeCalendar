@@ -2,10 +2,6 @@ $(document).ready(function(){
 
 var days = [
 {
-    name: 'Ind Day',
-    day: 16
-},
-{
     name: 'Labor Day',
     day: 1
 },
@@ -40,6 +36,8 @@ console.log(day);
    $($('td')[offset + (day -1)]).append('<span class="event">' + name + '</span>');
 }
 
+
+
 var btn = $('#submitter');
 btn.on('click', function(evt){
    evt.preventDefault();
@@ -48,20 +46,21 @@ btn.on('click', function(evt){
    var day = $('[name="eventDay"]').val();
    
    insertEvent(name,day)
+   $('#myModal').modal('hide');
 });
 
-$.each(days, function (index,date){
-    insertEvent(date.name, date.day);
-})
+$.each(days, function (index,dateObj){
+    insertEvent(dateObj.name, dateObj.day);
+});
 
 
 
 $('td').on('click', function (e) {
     console.log(e);
-    
     var day = $(e.target).children('.date').text();
     console.log(day);
     $('[name="eventDay"]').val(day);
+    $('#myModal').modal('show');
     
 });
 
